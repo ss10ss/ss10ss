@@ -2,7 +2,7 @@
 🔭 I’m currently working on: Building end-to-end AI automation pipelines and high-impact Data Analytics solutions.<br>👯 I’m looking to collaborate on: Projects that merge automated content creation with real-time data insights.<br>🤝 I’m looking for help with: Mastering advanced DAX queries and scaling self-hosted n8n infrastructure.<br>💬 Ask me about: Creating interactive Power BI dashboards, n8n workflow architecture, and AI-driven video production.<br>⚡ Fun fact: I bridge the gap between creative storytelling and data-driven decision-making using automation.
 
 
-## 🌐 Socials:
+# 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/ss10ss) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:shashank10srivastava@gmail.com) 
 
 # 💻 Tech Stack:
