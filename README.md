@@ -1,8 +1,8 @@
-<p align="right">
+<p align="center">
   <img src="my logo.png" width="180"/>
 </p>
 
-<h1 align="center">Hi 👋, I'm SS10ss</h1>
+<h1 align="center">Hi 👋, I'm Shashank</h1>
 
 <p align="center">
   AI Automation • Data Analytics • Power BI • n8n
