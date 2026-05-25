@@ -1,3 +1,14 @@
+<p align="right">
+  <img src="my logo.png" width="180"/>
+</p>
+
+<h1 align="center">Hi 👋, I'm SS10ss</h1>
+
+<p align="center">
+  AI Automation • Data Analytics • Power BI • n8n
+</p>
+
+
 # 💫 About Me:
 🔭 I’m currently working on: Building end-to-end AI automation pipelines and high-impact Data Analytics solutions.<br>👯 I’m looking to collaborate on: Projects that merge automated content creation with real-time data insights.<br>🤝 I’m looking for help with: Mastering advanced DAX queries and scaling self-hosted n8n infrastructure.<br>💬 Ask me about: Creating interactive Power BI dashboards, n8n workflow architecture, and AI-driven video production.<br>⚡ Fun fact: I bridge the gap between creative storytelling and data-driven decision-making using automation.
 
