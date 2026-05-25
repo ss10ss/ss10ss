@@ -4,9 +4,9 @@
 
 <h1 align="center">Hi 👋, I'm Shashank</h1>
 
-<p align="center">
-  <h3>AI Automation • Data Analytics • Power BI • n8n</h3>
-</p>
+<h3><p align="center">
+  AI Automation • Data Analytics • Power BI • n8n
+</p></h3>
 
 
 # 💫 About Me:
