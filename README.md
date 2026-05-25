@@ -5,7 +5,7 @@
 <h1 align="center">Hi 👋, I'm Shashank</h1>
 
 <p align="center">
-  AI Automation • Data Analytics • Power BI • n8n
+  <h2>AI Automation • Data Analytics • Power BI • n8n</h2>h2>
 </p>
 
 
