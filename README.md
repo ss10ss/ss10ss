@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/my logo.png" width="180"/>
+  <img src="media/my_logo.png" width="180"/>
 </p>
 
 <h1 align="center">Hi 👋, I'm Shashank</h1>
