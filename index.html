@@ -31,42 +31,45 @@
             overflow-x: hidden;
         }
 
-        /* Ambient Background Glows */
-        body::before {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, var(--glass-glow) 0%, transparent 70%);
-            top: 20%;
-            left: -150px;
-            z-index: -1;
-        }
-
         .container {
             max-width: 1050px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Modern Hero Banner Section */
-        header {
-            position: relative;
-            padding: 140px 0 60px 0;
-            text-align: center;
-            /* आपके मीडिया फोल्डर का सही इमेज पाथ और मॉडर्न डार्क ओवरले */
-            background-image: linear-gradient(to bottom, rgba(7, 10, 19, 0.75), var(--bg-dark)), url('media/linkedin_banner.jpg');
+        /* LinkedIn Style Profile Wrapper */
+        .profile-header-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 30px;
+            backdrop-filter: blur(12px);
+        }
+
+        /* Exact LinkedIn Banner Aspect Ratio Structure */
+        .linkedin-banner {
+            width: 100%;
+            padding-top: 25%; /* 4:1 Aspect Ratio */
+            background-image: url('media/linkedin_banner.jpg');
             background-size: cover;
             background-position: center;
+            position: relative;
             border-bottom: 1px solid var(--border);
         }
 
-        /* Floating Profile Picture Container */
+        .profile-info-container {
+            padding: 0 40px 40px 40px;
+            position: relative;
+        }
+
+        /* Circular Profile Pic overlapping the banner exactly like LinkedIn */
         .profile-img-container {
             position: relative;
-            width: 130px;
-            height: 130px;
-            margin: 0 auto 25px auto;
+            width: 150px;
+            height: 150px;
+            margin-top: -85px; /* Pulls the image up over the banner */
+            margin-bottom: 20px;
             z-index: 3;
         }
 
@@ -75,96 +78,98 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--primary);
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 4px solid #0d1527; /* Dark background cutout edge */
+            background-color: #0d1527;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
 
-        .profile-img-container:hover .profile-img {
-            transform: scale(1.08) rotate(3deg);
+        /* Profile details styled in LinkedIn format */
+        .profile-text-block {
+            text-align: left;
         }
 
         .profile-title {
-            font-size: 3.2rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+            color: var(--text-main);
         }
 
         .profile-title span {
             color: var(--accent);
-            text-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
         }
 
         .tagline {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             color: var(--text-main);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .location-text {
+            font-size: 0.95rem;
+            color: var(--text-muted);
             margin-bottom: 25px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
         }
 
         .description {
-            max-width: 720px;
-            margin: 0 auto 35px auto;
+            max-width: 800px;
             color: var(--text-muted);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
 
         .cta-buttons {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 15px;
         }
 
         .btn {
-            padding: 12px 28px;
-            border-radius: 8px;
+            padding: 10px 24px;
+            border-radius: 24px; /* Pill shape like LinkedIn buttons */
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
         }
 
         .btn-primary {
             background-color: var(--primary);
             color: #fff;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
         }
 
         .btn-primary:hover {
             background-color: #059669;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+            transform: translateY(-1px);
         }
 
         .btn-secondary {
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            background-color: rgba(17, 24, 39, 0.5);
-            backdrop-filter: blur(8px);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            background-color: transparent;
         }
 
         .btn-secondary:hover {
-            border-color: var(--primary);
             background-color: rgba(16, 185, 129, 0.1);
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
-        /* Modern Sections with Glassmorphism */
+        /* Sections Grid Content */
         section {
-            padding: 90px 0;
+            padding: 60px 0;
             border-bottom: 1px solid var(--border);
         }
 
         section h2 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 45px;
+            margin-bottom: 30px;
             position: relative;
             display: inline-block;
-            letter-spacing: -0.5px;
         }
 
         section h2::after {
@@ -172,227 +177,216 @@
             position: absolute;
             bottom: -6px;
             left: 0;
-            width: 50px;
-            height: 4px;
+            width: 40px;
+            height: 3px;
             border-radius: 2px;
-            background: linear-gradient(90deg, var(--primary), transparent);
+            background-color: var(--accent);
         }
 
         .grid-4 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            gap: 20px;
         }
 
         /* Glass Cards */
         .card {
             background: var(--bg-card);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--border);
-            padding: 30px 25px;
+            padding: 25px;
             border-radius: 12px;
             transition: all 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(16, 185, 129, 0.4);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px var(--glass-glow);
+            transform: translateY(-4px);
+            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
         .card h3 {
-            margin-bottom: 12px;
-            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-size: 1.15rem;
             color: var(--text-main);
         }
 
         .card p {
             color: var(--text-muted);
             font-size: 0.95rem;
-            line-height: 1.5;
         }
 
-        /* Ultra-Clean Skill Tags */
+        /* Skill Tags */
         .skills-wrapper {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
         }
 
         .skill-tag {
             background: rgba(16, 185, 129, 0.06);
             color: #34d399;
             border: 1px solid rgba(16, 185, 129, 0.15);
-            padding: 10px 20px;
-            border-radius: 30px;
+            padding: 8px 18px;
+            border-radius: 20px;
             font-weight: 500;
             font-size: 0.9rem;
-            transition: all 0.2s;
         }
 
-        .skill-tag:hover {
-            background: rgba(16, 185, 129, 0.15);
-            border-color: var(--primary);
-            transform: scale(1.03);
-        }
-
-        /* Modernized Timeline */
+        /* Timeline Experience */
         .timeline-item {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             position: relative;
-            padding-left: 30px;
+            padding-left: 25px;
             border-left: 2px solid var(--border);
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -7px;
+            left: -6px;
             top: 6px;
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background-color: var(--accent);
-            box-shadow: 0 0 10px var(--primary);
         }
 
         .time-period {
             font-size: 0.85rem;
             color: var(--accent);
-            font-weight: 700;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .timeline-item h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            margin-bottom: 5px;
         }
 
-        /* Modernized Footer */
+        /* Footer */
         footer {
-            padding: 60px 0;
+            padding: 40px 0;
             text-align: center;
             color: var(--text-muted);
-            font-size: 0.95rem;
-            border-top: 1px solid var(--border);
-            background: rgba(7, 10, 19, 0.5);
+            font-size: 0.9rem;
         }
 
         .footer-links {
-            margin: 20px 0;
+            margin: 15px 0;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 25px;
         }
 
         .footer-links a {
             color: var(--text-muted);
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s, transform 0.2s;
+            transition: color 0.3s;
         }
 
         .footer-links a:hover {
             color: var(--primary);
-            transform: translateY(-1px);
         }
 
+        /* Responsive Layout fixes */
         @media (max-width: 768px) {
-            .profile-title { font-size: 2.4rem; }
-            .tagline { font-size: 1.2rem; }
-            .cta-buttons { flex-direction: column; }
-            header { padding: 100px 0 50px 0; }
-            .profile-img-container { width: 110px; height: 110px; }
+            .profile-info-container { padding: 0 20px 30px 20px; }
+            .profile-img-container { width: 110px; height: 110px; margin-top: -60px; }
+            .profile-title { font-size: 2rem; }
+            .tagline { font-size: 1.1rem; }
+            .cta-buttons { flex-direction: column; gap: 10px; }
+            .btn { text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div class="profile-img-container">
-                <img src="media/linkedin_pro_pic.jpg" alt="Shashank Srivastava" class="profile-img">
-            </div>
-            <h1 class="profile-title">SHASHANK <span>SRIVASTAVA</span></h1>
-            <p class="tagline">AI Automation Specialist & Developer</p>
-            <p class="description">
-                I build robust n8n workflows, GitHub Actions, and AI agent automations that cut down repetitive work, optimize core operations, and empower teams to scale efficiently.
-            </p>
-            <div class="cta-buttons">
-                <a href="https://github.com/ss10ss" target="_blank" class="btn btn-primary">View GitHub Profile</a>
-                <a href="https://www.linkedin.com/in/ss10ss" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
-            </div>
-        </div>
-    </header>
-
-    <section class="container">
-        <h2>What I Do</h2>
-        <div class="grid-4">
-            <div class="card">
-                <h3>Process Automation</h3>
-                <p>Designing and deploying seamless end-to-end integration workflows.</p>
-            </div>
-            <div class="card">
-                <h3>AI Orchestration</h3>
-                <p>Connecting LLMs and AI agents into reliable daily workflows.</p>
-            </div>
-            <div class="card">
-                <h3>Workflow Optimization</h3>
-                <p>Auditing existing operations to remove bottlenecks and friction.</p>
-            </div>
-            <div class="card">
-                <h3>Operational Efficiency</h3>
-                <p>Structuring functional data models with speed and precision.</p>
+    <div class="container">
+        <div class="profile-header-wrapper">
+            <div class="linkedin-banner"></div>
+            <div class="profile-info-container">
+                <div class="profile-img-container">
+                    <img src="media/linkedin_pro_pic.jpg" alt="Shashank Srivastava" class="profile-img">
+                </div>
+                <div class="profile-text-block">
+                    <h1 class="profile-title">Shashank <span>Srivastava</span></h1>
+                    <p class="tagline">AI Automation Specialist & Developer | n8n, GitHub Actions, Workflow Automation</p>
+                    <p class="location-text">Prayagraj, Uttar Pradesh, India</p>
+                    <p class="description">
+                        I build robust n8n workflows, GitHub Actions, and AI agent automations that cut down repetitive work, optimize core operations, and empower teams to scale efficiently.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="https://github.com/ss10ss" target="_blank" class="btn btn-primary">View GitHub Profile</a>
+                        <a href="https://www.linkedin.com/in/ss10ss" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
 
-    <section class="container">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <span class="time-period">June 2026 - Present</span>
-                <h3>AI Automation Associate</h3>
-                <p style="color: var(--primary); margin-bottom: 5px; font-weight: 600;">iQation.com</p>
-                <p>Leading AI automation initiatives with a core focus on workflow architecture, systems integration, and AI agent orchestration.</p>
+        <section>
+            <h2>What I Do</h2>
+            <div class="grid-4">
+                <div class="card">
+                    <h3>Process Automation</h3>
+                    <p>Designing and deploying seamless end-to-end integration workflows.</p>
+                </div>
+                <div class="card">
+                    <h3>AI Orchestration</h3>
+                    <p>Connecting LLMs and AI agents into reliable daily workflows.</p>
+                </div>
+                <div class="card">
+                    <h3>Workflow Optimization</h3>
+                    <p>Auditing existing operations to remove bottlenecks and friction.</p>
+                </div>
+                <div class="card">
+                    <h3>Operational Efficiency</h3>
+                    <p>Structuring functional data models with speed and precision.</p>
+                </div>
             </div>
-            <div class="timeline-item">
-                <span class="time-period">January 2026 - March 2026</span>
-                <h3>Operations Analyst</h3>
-                <p style="color: var(--primary); margin-bottom: 5px; font-weight: 600;">Zetheta Algorithms</p>
-                <p>Executed market-driven data analysis and scaled operational efficiency workflows within the fintech domain.</p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="time-period">June 2026 - Present</span>
+                    <h3>AI Automation Associate</h3>
+                    <p style="color: var(--primary); margin-bottom: 5px; font-weight: 600;">iQation.com</p>
+                    <p>Leading AI automation initiatives with a core focus on workflow architecture, systems integration, and AI agent orchestration.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-period">January 2026 - March 2026</span>
+                    <h3>Operations Analyst</h3>
+                    <p style="color: var(--primary); margin-bottom: 5px; font-weight: 600;">Zetheta Algorithms</p>
+                    <p>Executed market-driven data analysis and scaled operational efficiency workflows within the fintech domain.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="container">
-        <h2>Technical Toolkit</h2>
-        <div class="skills-wrapper">
-            <span class="skill-tag">n8n Workflows</span>
-            <span class="skill-tag">GitHub Actions</span>
-            <span class="skill-tag">AI Agent Orchestration</span>
-            <span class="skill-tag">AI Automation Systems</span>
-            <span class="skill-tag">Microsoft Power BI</span>
-            <span class="skill-tag">Advanced Excel (MOS)</span>
-            <span class="skill-tag">Process Mapping</span>
-            <span class="skill-tag">Fintech Operations</span>
-        </div>
-    </section>
+        <section>
+            <h2>Technical Toolkit</h2>
+            <div class="skills-wrapper">
+                <span class="skill-tag">n8n Workflows</span>
+                <span class="skill-tag">GitHub Actions</span>
+                <span class="skill-tag">AI Agent Orchestration</span>
+                <span class="skill-tag">AI Automation Systems</span>
+                <span class="skill-tag">Microsoft Power BI</span>
+                <span class="skill-tag">Advanced Excel (MOS)</span>
+                <span class="skill-tag">Process Mapping</span>
+                <span class="skill-tag">Fintech Operations</span>
+            </div>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>Prayagraj, Uttar Pradesh, India</p>
+        <footer>
             <div class="footer-links">
                 <a href="https://linkedin.com/in/ss10ss" target="_blank">LinkedIn</a>
                 <a href="https://github.com/ss10ss" target="_blank">GitHub</a>
                 <a href="mailto:shashank10srivastava@gmail.com">Email</a>
             </div>
-            <p style="margin-top: 20px; font-size: 0.85rem; color: #4b5563;">&copy; 2026 Built by Shashank. Hosted on GitHub Pages.</p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #4b5563;">&copy; 2026 Built by Shashank. Hosted on GitHub Pages.</p>
         </div>
     </footer>
 
