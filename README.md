@@ -22,8 +22,8 @@ Handled InvestTech operations, market-driven analysis, operational efficiency, a
 
 
 # 🎓 INSTERNSHIPS & CERTIFICATIONS:
-Deloitte Australia - Data Analytics Job Simulation<BR>
-Operations Analyst Intern – Zetheta Algorithms
+● Deloitte Australia - Data Analytics Job Simulation<BR>
+● Operations Analyst Intern – Zetheta Algorithms
 
 
 # 🌐 SOCIALS:
