@@ -9,24 +9,24 @@
 </p></h3>
 
 
-# 💫 About Me:
+# 💫 ABOUT ME:
 I build n8n workflows, GitHub Actions, and AI agent automations that eliminate repetitive work. Most of my time is spent connecting tools, mapping processes, and making sure automations actually hold up in day-to-day use.
 
-# 💼 Experience:
+# 💼 EXPERIENCE:
 ## iQation.com | AI Automation Associate (June 2026 - Present)
 Focused on AI automation initiatives with a strong emphasis on workflow design and orchestration.
 
 ## Zetheta Algorithms Private Limited | Operations Analyst Intern (January 2026 - March 2026)
 Handled InvestTech operations, market-driven analysis, operational efficiency, and strategic problem-solving in the fintech domain.
 
-# 🎓 Internshipd & Certifications:
+# 🎓 INSTERNSHIPS & CERTIFICATIONS:
 Deloitte Australia - Data Analytics Job Simulation
 Operations Analyst Intern – Zetheta Algorithms
 
-# 🌐 Socials:
+# 🌐 SOCIALS:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/ss10ss) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:shashank10srivastava@gmail.com)
 
-# 💻 Tech Stack:
+# 💻 TECH STACK:
 ![n8n](https://img.shields.io/badge/n8n-FF6C37?style=for-the-badge&logo=n8n&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
